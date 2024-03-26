@@ -3,7 +3,6 @@ import org.jetbrains.kotlin.gradle.targets.js.npm.importedPackageDir
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    kotlin("kapt")
     alias(libs.plugins.ksp)
     alias(libs.plugins.dagger)
 }
@@ -54,15 +53,38 @@ dependencies {
     api(platform(libs.squareup.okhttp.bom))
     api(libs.squareup.okhttp)
     api(libs.squareup.okhttp.logging)
+    testImplementation(libs.squareup.okhttp.mockwebserver)
+    androidTestImplementation(libs.squareup.okhttp.mockwebserver)
     //hilt
     implementation(libs.google.hilt.android)
     implementation(libs.androidx.hilt.compose)
     ksp(libs.google.hilt.compiler)
+    kspTest(libs.google.hilt.compiler)
+    kspAndroidTest(libs.google.hilt.compiler)
+    testImplementation(libs.google.hilt.testing)
+    androidTestImplementation(libs.google.hilt.testing)
     //log
     implementation(libs.jakewharton.timber)
 
 
+    // Unit Tests
+    testImplementation(libs.androidx.test.annotation)
+    testImplementation(libs.androidx.test.core)
+    testImplementation(libs.androidx.test.junit)
+    testImplementation(libs.google.truth)
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    testImplementation(libs.mockito.inline)
+    testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.robolectric)
+
+    // Android Tests
+    androidTestUtil(libs.androidx.test.orchestrator)
+    androidTestImplementation(libs.androidx.test.annotation)
+    androidTestImplementation(libs.androidx.test.core)
+    androidTestImplementation(libs.androidx.test.junit)
+    androidTestImplementation(libs.androidx.test.runner)
+    androidTestImplementation(libs.androidx.test.rules)
+    androidTestImplementation(libs.google.truth)
+    androidTestImplementation(libs.junit)
+    androidTestImplementation(libs.robolectric.annotations)
 }

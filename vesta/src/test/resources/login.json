@@ -1,0 +1,37 @@
+{
+  "code": 0,
+  "data": {
+    "user": {
+      "ID": 8,
+      "CreatedAt": "2024-03-20T17:28:20.068+08:00",
+      "UpdatedAt": "2024-03-20T17:28:20.068+08:00",
+      "uuid": "1558fd1b-f169-49b5-bf5f-c66ed74ac078",
+      "userName": "18501052331",
+      "nickName": "appUser",
+      "sideMode": "dark",
+      "headerImg": "https://qmplusimg.henrongyi.top/gva_header.jpg",
+      "baseColor": "#fff",
+      "activeColor": "#1890ff",
+      "authorityId": 1,
+      "authority": {
+        "CreatedAt": "0001-01-01T00:00:00Z",
+        "UpdatedAt": "0001-01-01T00:00:00Z",
+        "DeletedAt": null,
+        "authorityId": 0,
+        "authorityName": "",
+        "parentId": null,
+        "dataAuthorityId": null,
+        "children": null,
+        "menus": null,
+        "defaultRouter": ""
+      },
+      "authorities": null,
+      "phone": "18501052331",
+      "email": "",
+      "enable": 1
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVVUlEIjoiMTU1OGZkMWItZjE2OS00OWI1LWJmNWYtYzY2ZWQ3NGFjMDc4IiwiSUQiOjgsIlVzZXJuYW1lIjoiMTg1MDEwNTIzMzEiLCJOaWNrTmFtZSI6ImFwcFVzZXIiLCJBdXRob3JpdHlJZCI6MSwiQnVmZmVyVGltZSI6ODY0MDAsImlzcyI6InFtUGx1cyIsImF1ZCI6WyJHVkEiXSwiZXhwIjoxNzEyMDQwNjA5LCJuYmYiOjE3MTE0MzU4MDl9.EKGG-lpmfftJbMl-Pjz0tQ8NhISLfQc2o4rZ1xtPqeY",
+    "expiresAt": 1712040609000
+  },
+  "msg": "登录成功"
+}
