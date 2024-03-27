@@ -40,6 +40,8 @@ dependencies {
 
     api(libs.androidx.core.ktx)
 
+    implementation(files("libs/SaaS_TalkingDataSDK_Android_V5.0.24.jar"))
+
     // KotlinX
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.kotlinx.coroutines.core)
@@ -65,7 +67,6 @@ dependencies {
     androidTestImplementation(libs.google.hilt.testing)
     //log
     implementation(libs.jakewharton.timber)
-
 
     // Unit Tests
     testImplementation(libs.androidx.test.annotation)
