@@ -22,9 +22,6 @@ afterEvaluate {
             }
         }
     }
-    repositories {
-        mavenLocal()
-    }
 }
 
 
