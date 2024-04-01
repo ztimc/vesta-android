@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.sabinetek.vesta</groupId> <!-- com.github.geek-atif-->
-    <artifactId>vesta</artifactId> <!-- com-atifqamar-customtoast -->
+    <artifactId>com-sabinetek-vesta</artifactId> <!-- com-atifqamar-customtoast -->
     <version>1.0.1</version> <!-- 1.0 -->
     <packaging>pom</packaging>
     <description>First version release</description>
