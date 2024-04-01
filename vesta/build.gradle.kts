@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.de.undercouch.gradle.tasks.download.org.apache.commons.logging.LogFactory.release
 import org.jetbrains.kotlin.gradle.targets.js.npm.importedPackageDir
 
 plugins {
@@ -5,9 +6,28 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
     alias(libs.plugins.ksp)
     alias(libs.plugins.dagger)
+
+    `maven-publish`
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("maven") {
+                groupId = "com.sabinetek.vesta"
+                artifactId = "vesta"
+                version = "1.0.0"
+
+                from(components["release"])
+            }
+        }
+    }
+}
+
+
 android {
+
+
     namespace = "com.sabinetek.vesta"
     compileSdk = 34
 
