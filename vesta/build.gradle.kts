@@ -10,15 +10,26 @@ plugins {
     `maven-publish`
 }
 
+
+group = "com.sabinetek.vesta"
+version = "1.0.1"
+
+val sourcesJar by tasks.registering(Jar::class) {
+    from(android.sourceSets["main"].java.getSourceFiles())
+    archiveClassifier.set("sources")
+}
+
+artifacts {
+    add("archives", sourcesJar)
+}
+
 afterEvaluate {
     publishing {
         publications {
-            create<MavenPublication>("maven") {
-                groupId = "com.sabinetek.vesta"
-                artifactId = "vesta"
-                version = "1.0.0"
-
+            create<MavenPublication>("Maven") {
                 from(components["release"])
+                artifactId = project.name
+                artifact(sourcesJar.get())
             }
         }
     }
