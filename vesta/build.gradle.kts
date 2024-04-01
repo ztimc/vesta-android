@@ -16,7 +16,7 @@ afterEvaluate {
             create<MavenPublication>("maven") {
                 groupId = "com.sabinetek.vesta"
                 artifactId = "com-sabinetek-vesta"
-                version = "1.0.6"
+                version = "1.0.8"
 
                 from(components["release"])
             }
