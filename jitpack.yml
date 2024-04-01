@@ -1,0 +1,8 @@
+jdk:
+  - openjdk17
+before_install:
+  - ./scripts/prepareJitpackEnvironment.sh
+install:
+  - FILE="-Dfile=com-sabinetek-vesta" #com-atifqamar-customtoast.aar
+  - mvn install:install-file $FILE -DgroupId=com.sabinetek.vesta -DartifactId=com-sabinetek-vesta -Dversion=1.0.6 -Dpackaging=aar -DgeneratePom=true
+  #com.github.geek-atif                      #com-atifqamar-customtoast  #1.0
