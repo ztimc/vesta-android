@@ -63,9 +63,9 @@ dependencies {
     implementation(files("libs/SaaS_TalkingDataSDK_Android_V5.0.24.jar"))
 
     // KotlinX
-    implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.kotlinx.coroutines.core)
-    implementation(libs.kotlinx.coroutinesjdk8)
+    api(libs.kotlinx.coroutines.android)
+    api(libs.kotlinx.coroutines.core)
+    api(libs.kotlinx.coroutinesjdk8)
     //retrofit
     api(libs.retrofit)
     api(libs.retrofit.moshi)
@@ -86,7 +86,7 @@ dependencies {
     testImplementation(libs.google.hilt.testing)
     androidTestImplementation(libs.google.hilt.testing)
     //log
-    implementation(libs.jakewharton.timber)
+    api(libs.jakewharton.timber)
 
     // Unit Tests
     testImplementation(libs.androidx.test.annotation)
